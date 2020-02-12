@@ -8,18 +8,19 @@ pipeline{
                     echo 'Packages restored'
           }
         }
-        stage('Build'){
-            steps{
-                    echo 'Building...'
-                    bat "dotnet build"
-                    echo '-------------------------------------------------------------------------------------'
-            
-            }
-        }
+        
         stage('Clean'){
             steps{
                     echo 'Cleanning...'
                     bat "dotnet clean"
+                    echo '-------------------------------------------------------------------------------------'
+            
+            }
+        }
+        stage('Build'){
+            steps{
+                    echo 'Building...'
+                    bat "dotnet build"
                     echo '-------------------------------------------------------------------------------------'
             
             }
