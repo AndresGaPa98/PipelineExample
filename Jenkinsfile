@@ -16,10 +16,18 @@ pipeline{
             
             }
         }
-        stage('Run'){
+        stage('Clean'){
             steps{
-                    echo 'Running...'
-                    bat "dotnet run"
+                    echo 'Cleanning...'
+                    bat "dotnet clean"
+                    echo '-------------------------------------------------------------------------------------'
+            
+            }
+        }
+        stage('Version'){
+            steps{
+                    echo 'The version is:'
+                    bat "dotnet --version"
                     echo '-------------------------------------------------------------------------------------'
             
             }
