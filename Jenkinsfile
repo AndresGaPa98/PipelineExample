@@ -4,7 +4,7 @@ pipeline{
       stage('Restore PACKAGES') {
           steps {
           echo 'Restoring packages'
-          bat "dotnet restore --configfile NuGet.Config"
+          bat "dotnet restore"
           echo 'Packages restored'
           }
         }
